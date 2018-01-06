@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "cd api && node bin/www &",
+    "back": "cd blog_back && webpack-dev-server --open --inline --progress --config build/webpack.dev.conf.js &",
+    "start": "concurrently \"npm run api\" \"npm run back\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3",
+    "run-sequence": "^2.2.0"
+  }
+}
